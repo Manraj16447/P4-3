@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #3: Changing Picture</title>
+    <style>
+      .container{
+          margin-top:200px;
+          margin-left:150px;
+      }
+ 
+      .f-group{
+          float:left;
+      }
+ 
+      .f-group label{
+          display:block;
+          margin-bottom: 8px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 500;
+      }
+ 
+      select{
+          border:1px solid #555;
+          height:40px;
+          width:200px;
+          padding:0 15px;
+          margin-right:20px;
+      }
+    </style>
+</head>
+<body>
+  <img src="img/default.jfif" alt="" id="default" onclick="change();">
+<script>
+ 
+    var image_tracker ='f';
+    function change()
+    {
+         var image = document.getElementById('default');
+         alert(image.src);
+         if(image_tracker ==='f')
+         {
+              image .src = "img/norway.jfif"; 
+              image_tracker ='t';
+         }
+ 
+         else{
+            image .src = "img/default.jfif"; 
+             image_tracker ='f';
+         }
+    }
+    
+</script>
+</body>
+</html>
